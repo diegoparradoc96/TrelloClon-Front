@@ -1,7 +1,11 @@
-export default function Home() {
+import { Navbar_ } from "../components";
+
+const Home = () => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p>hola mundo</p>
+      <Navbar_ />
     </main>
-  )
-}
+  );
+};
+
+export default Home;
