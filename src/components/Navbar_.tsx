@@ -12,19 +12,19 @@ import {
 } from "@nextui-org/react";
 
 /* react icons */
-import { CgTrello } from "react-icons/cg";
+import { FaTrello } from "react-icons/fa";
 
 const Navbar_ = () => {
   return (
-    <Navbar isBordered isMenuOpen={true} className="md:w-48 lg:w-48  bg-red-500">
-      <NavbarBrand className="">
-        <CgTrello size={30} />
-        <p>Trello</p>
-      </NavbarBrand>
+    <Navbar isBordered className="text-slate-400 bg-[#1D2125]" maxWidth="full">
+      <NavbarContent>
+        <NavbarItem className="flex row place-items-center">
+          <FaTrello size={17} />
+          <p className="text-lg align-middle font-bold">Trello</p>
+        </NavbarItem>
 
-      <NavbarContent className="" justify="start">
         <NavbarItem>
-          <Link>Espacios de trabajo</Link>
+          <p>Espacios de trabajo</p>
         </NavbarItem>
       </NavbarContent>
     </Navbar>
