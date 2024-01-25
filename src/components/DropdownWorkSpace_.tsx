@@ -23,7 +23,7 @@ const DropdownWorkSpace_: React.FC = () => {
       <DropdownTrigger>
         <Button
           variant="light"
-          className="text-slate-400 font-bold"
+          className="text-slate-300 font-bold"
           size="md"
           radius="sm"
           endContent={<IoIosArrowDown />}
@@ -31,21 +31,33 @@ const DropdownWorkSpace_: React.FC = () => {
           Espacios de trabajo
         </Button>
       </DropdownTrigger>
-      <DropdownMenu variant="faded" aria-label="Tus Espacios de trabajo">
-        <DropdownSection title="Actions" showDivider className="font-bold">
+      <DropdownMenu
+        variant="faded"
+        itemClasses={{
+          title: ["text-white"],
+          base: ["rounded-md"],
+        }}
+      >
+        <DropdownSection
+          title="Espacio de trabajo actual"
+          itemClasses={{ title: "text-white" }}
+          showDivider
+        >
           <DropdownItem
             key="new"
-            description="Create a new file"            
+            description="Create a new file"
             startContent={<TbCircleLetterW size={30} />}
-            className="text-slate-300"
           >
             New file
           </DropdownItem>
         </DropdownSection>
-        <DropdownSection title="Secondary">
+        <DropdownSection
+          title="Tus espacios de trabajo"
+          className="text-slate-50"
+        >
           <DropdownItem
             key="dos"
-            description="nuevo prueba"            
+            description="nuevo prueba"
             startContent={<TbCircleLetterW size={30} />}
           >
             Nuevo item
