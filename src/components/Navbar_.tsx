@@ -11,20 +11,28 @@ import {
   NavbarBrand,
 } from "@nextui-org/react";
 
+/* components */
+import { DropdownWorkSpace_ } from "./index";
+
 /* react icons */
 import { FaTrello } from "react-icons/fa";
 
 const Navbar_ = () => {
   return (
-    <Navbar isBordered className="text-slate-400 bg-[#1D2125]" maxWidth="full">
+    <Navbar
+      isBordered
+      className="text-slate-400 bg-[#1D2125]"
+      maxWidth="full"
+      height="46px"
+    >
       <NavbarContent>
         <NavbarItem className="flex row place-items-center">
           <FaTrello size={17} />
-          <p className="text-lg align-middle font-bold">Trello</p>
+          <p className="text-lg align-middle font-bold ml-1">Trello</p>
         </NavbarItem>
 
         <NavbarItem>
-          <p>Espacios de trabajo</p>
+          <DropdownWorkSpace_ />
         </NavbarItem>
       </NavbarContent>
     </Navbar>
