@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 /* next tools */
@@ -28,7 +30,7 @@ const Navbar_ = () => {
       <NavbarContent>
         <NavbarItem className="flex row place-items-center">
           <FaTrello size={17} />
-          <p className="text-lg align-middle font-bold ml-1">Trello</p>
+          <p className="text-xl align-middle font-bold ml-1">Trello</p>
         </NavbarItem>
 
         <NavbarItem>
