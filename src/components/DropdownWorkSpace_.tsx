@@ -43,7 +43,6 @@ const DropdownWorkSpace_: React.FC = () => {
             key="new"
             description="Create a new file"
             startContent={<TbCircleLetterW size={30} />}
-           
           >
             Proyectos personales
           </DropdownItem>
