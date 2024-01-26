@@ -10,6 +10,7 @@ import {
   DropdownSection,
   DropdownItem,
   Button,
+  Avatar,
 } from "@nextui-org/react";
 
 /* react icons */
@@ -38,18 +39,34 @@ const DropdownWorkSpace_: React.FC = () => {
         disableAnimation={true}
       >
         {/* Espacios de trabajo actual */}
-        <DropdownSection title="Espacio de trabajo actual" showDivider>
+        <DropdownSection
+          title="Espacio de trabajo actual"
+          showDivider
+          classNames={{ heading: "text-slate-300 font-bold" }}
+        >
           <DropdownItem
             key="new"
-            description="Create a new file"
-            startContent={<TbCircleLetterW size={30} />}
+            startContent={
+              <Avatar
+                name="P"
+                radius="sm"
+                classNames={{
+                  base: "bg-gradient-to-br from-[#FFB457] to-[#FF705B]",
+                  name: "text-lg font-bold"
+                }}
+              />
+            }
+            classNames={{ description: "text-slate-300" }}
           >
             Proyectos personales
           </DropdownItem>
         </DropdownSection>
 
         {/* Tus espacios de trabajo */}
-        <DropdownSection title="Tus Espacios de trabajo">
+        <DropdownSection
+          title="Tus Espacios de trabajo"
+          classNames={{ heading: "text-slate-300 font-bold" }}
+        >
           <DropdownItem
             key="dos"
             description="nuevo prueba"
