@@ -25,7 +25,7 @@ const DropdownWorkSpace_: React.FC = () => {
         <Button
           variant="light"
           className="text-slate-300 font-bold"
-          size="md"
+          size="sm"
           radius="sm"
           endContent={<IoIosArrowDown />}
         >
@@ -45,6 +45,7 @@ const DropdownWorkSpace_: React.FC = () => {
           classNames={{ heading: "text-slate-300 font-bold" }}
         >
           <DropdownItem
+            //isDisabled={true}
             key="new"
             startContent={
               <Avatar
@@ -52,7 +53,7 @@ const DropdownWorkSpace_: React.FC = () => {
                 radius="sm"
                 classNames={{
                   base: "bg-gradient-to-br from-[#FFB457] to-[#FF705B]",
-                  name: "text-lg font-bold"
+                  name: "text-lg font-bold",
                 }}
               />
             }

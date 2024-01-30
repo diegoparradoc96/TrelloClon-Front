@@ -14,7 +14,7 @@ import {
 } from "@nextui-org/react";
 
 /* components */
-import { DropdownWorkSpace_ } from "./index";
+import { DropdownWorkSpace_, ButtonCreateWorkSpace_ } from "./index";
 
 /* react icons */
 import { FaTrello } from "react-icons/fa";
@@ -35,6 +35,10 @@ const Navbar_ = () => {
 
         <NavbarItem>
           <DropdownWorkSpace_ />
+        </NavbarItem>
+
+        <NavbarItem>
+          <ButtonCreateWorkSpace_ />
         </NavbarItem>
       </NavbarContent>
     </Navbar>
