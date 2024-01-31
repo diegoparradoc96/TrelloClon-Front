@@ -19,12 +19,12 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const DropdownWorkSpace_: React.FC = () => {
   return (
-    <Dropdown className="bg-[#282E33]">
+    <Dropdown className="bg-[#282E33] mx-0">
       {/* button */}
       <DropdownTrigger>
         <Button
           variant="light"
-          className="text-slate-300 font-bold"
+          className="text-[#9EACBA] text-sm font-bold"
           size="sm"
           radius="sm"
           endContent={<IoIosArrowDown />}

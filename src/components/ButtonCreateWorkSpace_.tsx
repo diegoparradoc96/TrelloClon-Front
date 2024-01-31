@@ -15,13 +15,13 @@ import { FaTrello } from "react-icons/fa";
 
 const ButtonCreateWorkSpace_ = () => {
   return (
-    <Dropdown className="bg-[#282E33]">
+    <Dropdown className="bg-[#282E33] m-0">
       <DropdownTrigger>
         <Button
           variant="light"
-          className="text-slate-300 font-bold"
+          className="text-[#000] text-sm bg-[#579dff] rounded"
           size="sm"
-          radius="sm"
+          radius="none"
         >
           Crear
         </Button>

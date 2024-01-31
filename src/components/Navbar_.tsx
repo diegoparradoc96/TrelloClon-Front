@@ -6,31 +6,21 @@ import React from "react";
 import { Link } from "@nextui-org/react";
 
 /* next ui */
-import {
-  Navbar,
-  NavbarContent,
-  NavbarItem,
-  NavbarBrand,
-} from "@nextui-org/react";
+import { Navbar, NavbarContent, NavbarItem } from "@nextui-org/react";
 
 /* components */
-import { DropdownWorkSpace_, ButtonCreateWorkSpace_ } from "./index";
-
-/* react icons */
-import { FaTrello } from "react-icons/fa";
+import {
+  DropdownWorkSpace_,
+  ButtonCreateWorkSpace_,
+  TittleWorkSpace_,
+} from "./index";
 
 const Navbar_ = () => {
   return (
-    <Navbar
-      isBordered
-      className="text-slate-400 bg-[#1D2125]"
-      maxWidth="full"
-      height="46px"
-    >
-      <NavbarContent>
-        <NavbarItem className="flex row place-items-center">
-          <FaTrello size={17} />
-          <p className="text-xl align-middle font-bold ml-1">Trello</p>
+    <Navbar isBordered className="bg-[#1D2125]" maxWidth="full" height="46px">
+      <NavbarContent justify="start">
+        <NavbarItem>
+          <TittleWorkSpace_ />
         </NavbarItem>
 
         <NavbarItem>
