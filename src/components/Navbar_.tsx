@@ -17,7 +17,7 @@ import {
 
 const Navbar_ = () => {
   return (
-    <Navbar isBordered className="bg-[#1D2125]" maxWidth="full" height="46px">
+    <Navbar isBordered className="bg-[#1D2125]" maxWidth="full" height="46px" >
       <NavbarContent justify="start">
         <NavbarItem>
           <TittleWorkSpace_ />

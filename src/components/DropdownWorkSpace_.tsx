@@ -35,7 +35,6 @@ const DropdownWorkSpace_: React.FC = () => {
 
       <DropdownMenu
         variant="solid"
-        selectionMode="none"
         disableAnimation={true}
       >
         {/* Espacios de trabajo actual */}
@@ -45,7 +44,7 @@ const DropdownWorkSpace_: React.FC = () => {
           classNames={{ heading: "text-slate-300 font-bold" }}
         >
           <DropdownItem
-            //isDisabled={true}
+            isReadOnly
             key="new"
             startContent={
               <Avatar
@@ -57,7 +56,11 @@ const DropdownWorkSpace_: React.FC = () => {
                 }}
               />
             }
-            classNames={{ description: "text-slate-300" }}
+            style={{
+              backgroundColor: "#282E33",
+              color: "#fff",
+              cursor: "default",
+            }}
           >
             Proyectos personales
           </DropdownItem>
