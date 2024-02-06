@@ -19,7 +19,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const DropdownWorkSpace_: React.FC = () => {
   return (
-    <Dropdown className="bg-[#282E33] mx-0">
+    <Dropdown className="bg-[#282E33] mx-0" isDisabled>
       {/* button */}
       <DropdownTrigger>
         <Button
@@ -33,10 +33,7 @@ const DropdownWorkSpace_: React.FC = () => {
         </Button>
       </DropdownTrigger>
 
-      <DropdownMenu
-        variant="solid"
-        disableAnimation={true}
-      >
+      <DropdownMenu variant="solid">
         {/* Espacios de trabajo actual */}
         <DropdownSection
           title="Espacio de trabajo actual"
