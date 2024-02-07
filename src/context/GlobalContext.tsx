@@ -23,7 +23,9 @@ export const MyGlobalContextProvider = ({
   const myFuncs = new MyFuncs();
 
   return (
-    <GlobalContext.Provider value={{myFuncs: myFuncs}}>{children}</GlobalContext.Provider>
+    <GlobalContext.Provider value={{ myFuncs: myFuncs }}>
+      {children}
+    </GlobalContext.Provider>
   );
 };
 
