@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 /* components */
@@ -13,9 +15,15 @@ import {
 /* react icons */
 import { FaTrello } from "react-icons/fa";
 
-const ButtonCreateWorkSpace_ = () => {
+interface IButtonCreateWorkSpace_ {
+  toggleCreateBoard: () => void;
+}
+
+const ButtonCreateWorkSpace_: React.FC<IButtonCreateWorkSpace_> = ({
+  toggleCreateBoard,
+}) => {
   return (
-    <Dropdown className="bg-[#282E33] m-0">
+    <Dropdown className="bg-[#282E33] m-0" disableAnimation>
       <DropdownTrigger>
         <Button
           variant="light"
@@ -32,8 +40,14 @@ const ButtonCreateWorkSpace_ = () => {
         selectionMode="none"
         disableAnimation={true}
         className="max-w-96"
+        aria-label="menu"
+        aria-labelledby="menu"
       >
-        <DropdownItem key="new">
+        <DropdownItem
+          key="new"
+          onClick={() => toggleCreateBoard()}
+          textValue="hola"
+        >
           <div className="flex flex-row items-center">
             <FaTrello />
             <p className="ml-1">Crear tablero</p>
