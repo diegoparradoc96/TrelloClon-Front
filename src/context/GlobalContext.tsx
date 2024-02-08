@@ -1,17 +1,6 @@
 import { createContext, useContext, ReactNode } from "react";
 
-interface IGlobalContext {
-  myFuncs: any;
-}
-
-/*  */
-class MyFuncs {
-  myFun() {
-    console.log("Mi funcion global");
-  }
-}
-
-/*  */
+import { IGlobalContext, MyFuncs } from "../context";
 
 const GlobalContext = createContext<IGlobalContext | null>(null);
 
@@ -22,8 +11,12 @@ export const MyGlobalContextProvider = ({
 }) => {
   const myFuncs = new MyFuncs();
 
+  const globalContext = {
+    myFuncs: myFuncs,
+  };
+
   return (
-    <GlobalContext.Provider value={{ myFuncs: myFuncs }}>
+    <GlobalContext.Provider value={globalContext}>
       {children}
     </GlobalContext.Provider>
   );

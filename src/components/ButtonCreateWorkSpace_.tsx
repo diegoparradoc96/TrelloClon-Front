@@ -1,33 +1,31 @@
 "use client";
 
-/* aun no he podido ejecutar el evento onClick en un dropdownItem */
-
-import React from "react";
-
+import React, { useState } from "react";
 /* components */
 import {
   Button,
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
-  DropdownSection,
   DropdownItem,
 } from "@nextui-org/react";
 /* react icons */
 import { FaTrello } from "react-icons/fa";
 /* GlobalContext */
-
 import { useGlobalContext } from "../context/GlobalContext";
 
 const ButtonCreateWorkSpace_: React.FC = () => {
+  const [viewModal, setViewModal] = useState(false);
+
   const { myFuncs } = useGlobalContext();
 
-  const toggleItem = (key: string) => {
+  const toggleItem = (key: React.Key) => {
     const actions = [
       {
         action: "createBoard",
         func: () => {
-          myFuncs.myFun();
+          //myFuncs.myFun();
+          setViewModal(true);
         },
       },
     ];
